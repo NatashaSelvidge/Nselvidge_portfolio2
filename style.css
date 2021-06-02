@@ -10,7 +10,8 @@
   --font: "Montserrat", snas-serif;
   --prime-font: "Work Sans";
   --bg: #1a1c20;
-  --main-color: #2bdd9d;
+  /* --main-color: #2bdd9d; */
+  --main-color: #1dd3b0;
   --main-font-color: #fdfbfb;
   --sec-font-color: #fcf1f1b4;
 }
@@ -18,6 +19,7 @@ body {
   background: var(--bg);
   font-family: var(--font);
   color: var(--main-font-color);
+  overflow-x: hidden;
 }
 
 .center {
@@ -59,4 +61,68 @@ body {
   background: var(--main-color);
 }
 
-/* main */
+/* main section */
+.main {
+  width: 80%;
+  height: 650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main::before,
+.main::after {
+  content: "";
+  width: 80%;
+  height: 70%;
+  background: #151618;
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  z-index: -10;
+}
+
+.main::after {
+  background: #15161885;
+  height: 60%;
+  top: 20px;
+  left: -40%;
+  border-top: 1px solid #1dd3b0;
+  border-right: 1px solid #086375;
+}
+
+.box h1 {
+  font-size: 4.5em;
+  margin-bottom: 0.2em;
+}
+
+.box p {
+  font-size: 1.2em;
+  color: var(--sec-font-color);
+  margin-bottom: 1.2em;
+}
+
+.box .btn {
+  font-size: 1.2em;
+  background: none;
+  color: var(--sec-font-color);
+  border: none;
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  width: 7em;
+  height: 2.2em;
+  transition: all 0.4s;
+}
+
+.box .btn:hover {
+  background: var(--main-color);
+  color: white;
+}
+
+.main img {
+  width: 35em;
+  position: absolute;
+  right: 60px;
+  z-index: -1;
+}
