@@ -126,3 +126,34 @@ body {
   right: 60px;
   z-index: -1;
 }
+/* media */
+@media (max-width: 1250px) {
+  .main img {
+    width: 25em;
+    right: 0;
+  }
+  .main img {
+    width: 35em;
+    top: 80px;
+  }
+  .main {
+    align-items: flex-end;
+  }
+  .checkBtn {
+    display: block;
+    width: 25px;
+    height: 35px;
+    cursor: pointer;
+  }
+  
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .main img {
+    width: 22em;
+  }
+}
