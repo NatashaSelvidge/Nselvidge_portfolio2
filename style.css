@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Work+Sans:wght@400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Josefin Sans", sans-serif; */
+}
+
+:root {
+  --font: "Montserrat", snas-serif;
+  --prime-font: "Work Sans";
+  --bg: #1a1c20;
+  --main-color: #2bdd9d;
+  --main-font-color: #fdfbfb;
+  --sec-font-color: #fcf1f1b4;
+}
+body {
+  background: var(--bg);
+  font-family: var(--font);
+  color: var(--main-font-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar */
+.nav {
+  width: 85%;
+  height: 70px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.checkBtn {
+  display: none;
+}
+
+.nav .logo {
+  font-size: 2em;
+}
+
+.nav ol {
+  list-style: none;
+}
+
+.nav ol a {
+  text-decoration: none;
+  color: var(--sec-font-color);
+  margin: 0.3em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+  transition: background 0.8s;
+}
+
+.nav ol a:hover {
+  background: var(--main-color);
+}
+
+/* main */
