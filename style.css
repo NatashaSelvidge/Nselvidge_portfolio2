@@ -126,6 +126,51 @@ body {
   right: 60px;
   z-index: -1;
 }
+
+/* about */
+.about {
+  width: 100%;
+  padding: 8em 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.about .box_wrap {
+  margin: 2em 0;
+}
+
+.about .box_wrap .heading {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.about .box_wrap .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 80px;
+  height: 8px;
+  background: var(--main-color);
+  z-index: -1;
+}
+
+.about .box_wrap .text,
+.about .box_wrap i {
+  color: var(--sec-font-color);
+}
+
+.about .box_wrap {
+  width: 35%;
+}
+
+.skills_box i {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 /* media */
 @media (max-width: 1250px) {
   .main img {
@@ -144,8 +189,47 @@ body {
     width: 25px;
     height: 35px;
     cursor: pointer;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
   }
-  
+
+  .checkBtn::before {
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    font-size: 1.9em;
+    color: var(--sec-font-color);
+  }
+  .checkBtn:checked::before {
+    content: "\f00d";
+  }
+  .nav ol {
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    background: var(--bg);
+    top: 80px;
+    left: 0;
+    z-index: 100;
+    padding: 1.2em;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s;
+  }
+  .checkBtn:checked ~ ol {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .nav ol::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--main-color);
+  }
+}
 
 @media (max-width: 1000px) {
   body {
@@ -155,5 +239,21 @@ body {
 @media (max-width: 900px) {
   .main img {
     width: 22em;
+  }
+  .about .box_wrap {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .main img {
+    width: 22em;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    font-size: 10px;
+  }
+  .main {
+    height: 450px;
   }
 }
