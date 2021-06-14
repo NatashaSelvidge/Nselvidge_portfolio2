@@ -42,6 +42,7 @@ body {
 
 .nav .logo {
   font-size: 2em;
+  color: var(--bg);
 }
 
 .nav ol {
@@ -121,7 +122,7 @@ body {
 }
 
 .main img {
-  width: 35em;
+  width: 25em;
   position: absolute;
   right: 60px;
   z-index: -1;
@@ -360,11 +361,11 @@ body {
 /* media */
 @media (max-width: 1250px) {
   .main img {
-    width: 25em;
+    width: 22em;
     right: 0;
   }
   .main img {
-    width: 35em;
+    width: 22em;
     top: 80px;
   }
   .main {
