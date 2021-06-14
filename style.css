@@ -278,6 +278,7 @@ body {
   font-size: 3em;
 }
 .projects .container {
+  flex-wrap: wrap;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -313,6 +314,47 @@ body {
 .projects .container a div {
   padding: 2em;
   background: rgba(255, 255, 255, 0.034);
+}
+
+/* contact */
+
+.contact {
+  width: 100%;
+  padding: 5em 0;
+  flex-direction: column;
+}
+
+.contact h3 {
+  font-size: 3em;
+}
+
+.contact form {
+  flex-direction: column;
+  min-width: 30%;
+}
+
+.contact form :is(input, textarea, button) {
+  margin: 0.8em;
+  width: 100%;
+  height: 45px;
+  background: #1516186e;
+  color: #fff;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0.2em 1em;
+}
+
+.contact form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.contact form button {
+  background: var(--main-color);
+  cursor: pointer;
+  height: 40px;
+  font-size: 1em;
 }
 
 /* media */
