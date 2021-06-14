@@ -9,19 +9,18 @@
       src="https://kit.fontawesome.com/d7ce815ef5.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
     <title>Natasha's Portfolio</title>
   </head>
   <body>
     <header class="nav center">
-      <p class="logo">California</p>
+      <p class="logo">LOGO</p>
       <input type="checkbox" name="" class="checkBtn" />
       <ol class="center">
-        <a href="#"><li>About</li></a>
-        <a href="#"><li>Education</li></a>
-        <a href="#"><li>Experience</li></a>
-        <a href="#"><li>Projects</li></a>
-        <a href="#"><li>Contacts</li></a>
+        <a href="#About"><li>About</li></a>
+        <a href="#Education"><li>Education</li></a>
+        <a href="#Experience"><li>Experience</li></a>
+        <a href="#Projects"><li>Projects</li></a>
+        <a href="#Contacts"><li>Contacts</li></a>
       </ol>
     </header>
     <section class="main">
@@ -30,10 +29,10 @@
         <p>Full-Stack Developer</p>
         <button class="btn">About</button>
       </div>
-      <img src="profile-photo2.jpg" alt="" />
+      <img src="me.png" alt="" />
     </section>
     <!-- About -->
-    <div class="about center">
+    <div class="about center" id="About">
       <div class="box_wrap">
         <p class="heading">About</p>
         <p class="text">
@@ -54,7 +53,7 @@
       </div>
     </div>
     <!-- Education -->
-    <div class="education center">
+    <div class="education center" id="Education">
       <div class="left_box">
         <h1 class="heading">Education</h1>
         <div class="container">
@@ -76,8 +75,7 @@
       </div>
     </div>
     <!-- Experience -->
-
-    <div class="experience center">
+    <div class="experience center" id="Experience">
       <h3>Experience</h3>
       <ul>
         <li>
@@ -93,7 +91,7 @@
       </ul>
     </div>
     <!-- Projects -->
-    <div class="projects center">
+    <div class="projects center" id="Projects">
       <h3>Projects</h3>
       <div class="container">
         <a
@@ -118,5 +116,63 @@
         >
       </div>
     </div>
+    <!-- Contact -->
+    <section class="center">
+      <div class="contact center" id="Contacts">
+        <h3>Contact</h3>
+        <form
+          action="https://formspree.io/f/moqywwzk"
+          method="POST"
+          class="center"
+          id="my-form"
+        >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name.."
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email.."
+          />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Enter your message.."
+          ></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <p id="my-form-status"></p>
+      </div>
+    </section>
+    <script>
+      var form = document.getElementById("my-form");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            status.innerHTML = "Thanks, I will contact you shortly!";
+            form.reset();
+          })
+          .catch((error) => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          });
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
   </body>
 </html>
