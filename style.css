@@ -265,7 +265,55 @@ body {
   margin: 0.4em 0;
 }
 
+/* projects */
 
+.projects {
+  width: 100%;
+  padding: 0.5em 0;
+  background: #151615;
+  flex-direction: column;
+}
+
+.projects h3 {
+  font-size: 3em;
+}
+.projects .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.projects .container a {
+  text-decoration: none;
+  color: white;
+  margin: 2em 0.8em 0 0;
+  position: relative;
+}
+.projects .container a::before {
+  content: "\f0a9";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Font Awesome 5 free";
+  font-weight: 700;
+  background: #1dd3b0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path 0.4s;
+}
+
+.projects .container a:hover::before {
+  clip-path: circle(70.7% at 50% 50%);
+}
+.projects .container a div {
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.034);
+}
 
 /* media */
 @media (max-width: 1250px) {
