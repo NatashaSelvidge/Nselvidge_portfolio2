@@ -220,6 +220,7 @@ body {
 .education .right_box img {
   width: 100%;
 }
+
 /* experience */
 
 .experience {
@@ -263,6 +264,8 @@ body {
 .experience ul li :is(small, p) {
   margin: 0.4em 0;
 }
+
+
 
 /* media */
 @media (max-width: 1250px) {
