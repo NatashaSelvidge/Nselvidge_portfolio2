@@ -42,7 +42,7 @@ body {
 
 .nav .logo {
   font-size: 2em;
-  color: var(--bg);
+  /* color: var(--bg); */
 }
 
 .nav ol {
