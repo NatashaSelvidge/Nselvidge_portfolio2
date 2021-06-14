@@ -220,6 +220,49 @@ body {
 .education .right_box img {
   width: 100%;
 }
+/* experience */
+
+.experience {
+  width: 100%;
+  padding: 5em 0;
+  flex-direction: column;
+}
+
+.experience h3 {
+  font-size: 3em;
+}
+.experience ul {
+  list-style: none;
+}
+
+.experience ul li {
+  margin: 3em 0;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  background: #2b2d334f;
+  cursor: pointer;
+  position: relative;
+}
+
+.experience ul li::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0px;
+  left: -20px;
+  transform: translateY(8px);
+  transition: transform 0.4s;
+}
+
+.experience ul li:hover::before {
+  transform: translateY(0px);
+}
+
+.experience ul li :is(small, p) {
+  margin: 0.4em 0;
+}
 
 /* media */
 @media (max-width: 1250px) {
